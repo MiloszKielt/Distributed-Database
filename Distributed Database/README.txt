@@ -38,9 +38,3 @@ READ BEFORE USING THE PROGRAM
         "localhost" hostname.
     - Exception thrown during assignment of new data results in re-assigning old data (data safety)
     - In case of sending a non-existing command to the system, a message "ERROR: WRONG COMMAND" will be returned
-
-3. WHAT DOES NOT WORK:
-    - Because of the nature of this program, server nodes can only function on one device (if we would create 2 nodes
-      on different devices they wouldn't communicate on the database level). This could be solved by reconfiguring
-      target's device DNS settings to return "localhost" for the localhost host address (127.0.0.1), and then changing
-      "localhost" strings in the code to *.getInetAddress().getHostName() method, where (*) is the name of the socket.
